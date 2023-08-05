@@ -1,0 +1,197 @@
+.attendance__page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(#111, 0.6);
+  align-items: center;
+
+  .attendance__container {
+    width: 95%;
+    height: 95vh;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 0.6fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "l c c r"
+      "x c c r"
+      "x c c r";
+    gap: 1rem;
+
+    .ap__left {
+      grid-area: l;
+      background-color: white;
+      border-radius: 0.5rem;
+      display: flex;
+      padding: 0.8rem;
+      flex-direction: column;
+      gap: 0.7rem;
+      justify-content: space-between;
+
+      .loader {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 0.5rem 0;
+
+      }
+
+      .attendance__btn {
+        width: 100%;
+        background-color: #187fc2;
+        color: white;
+        cursor: pointer;
+        border: none;
+        font-size: 1rem;
+        font-weight: 500;
+        border-radius: 0.3rem;
+        padding: 0.4rem;
+        margin: 0.3rem 0;
+      }
+
+      .start__btn {
+        width: 100%;
+        background-color: #18c22f;
+        color: white;
+        cursor: pointer;
+        border: none;
+        font-size: 1rem;
+        font-weight: 500;
+        border-radius: 0.3rem;
+        padding: 0.4rem;
+
+        &.on {
+          background-color: crimson;
+        }
+      }
+
+      h3 {
+        color: #18c22f;
+        margin: 0.5rem 0;
+      }
+
+      p {
+        color: #333;
+      }
+
+      .time__input {
+        display: flex;
+        align-items: center;
+        border-radius: 0.3rem;
+        gap: 0.7rem;
+        border: 1px solid lightgray;
+        padding: 0 0.5rem;
+
+        .icon {
+          font-size: 1.25rem;
+          color: #187fc2;
+        }
+
+        input {
+          width: 100%;
+          padding: 0.5rem;
+          border: none;
+          outline: none;
+          color: #555;
+        }
+      }
+    }
+
+    .ap__center {
+      grid-area: c;
+      background-color: white;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      position: relative;
+
+      .attendance__video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+
+    }
+
+    .ap__right {
+      grid-area: r;
+      background-color: white;
+      border-radius: 0.5rem;
+      overflow-y: auto;
+
+      label {
+        color: #187fc2;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        font-weight: 500;
+        display: flex;
+
+        justify-content: center;
+        padding: 0.5rem 0;
+      }
+
+      &::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background-color: white;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background-color: rgba(gray, 0.6);
+      }
+
+      ul {
+        width: 100%;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0.3rem 0;
+
+
+
+
+
+        li {
+          text-align: center;
+          width: 80%;
+          padding: 0.6rem 0.8rem;
+          font-size: 1.2rem;
+          border-radius: 0.5rem;
+          margin: 0.3rem;
+          color: white;
+          background-color: rgba(#18c232, 0.7);
+          animation: trans 1s ease;
+          cursor: pointer;
+          transition: all 300ms ease-in;
+          position: relative;
+
+          .icon {
+            position: absolute;
+            right: 0.4rem;
+            top: 25%;
+            color: crimson;
+
+          }
+
+          &:hover {
+            transform: scale(1.03);
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes trans {
+  from {
+    transform: translateY(-100vh);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+
+}

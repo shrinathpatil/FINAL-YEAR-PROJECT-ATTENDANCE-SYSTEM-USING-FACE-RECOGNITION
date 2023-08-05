@@ -1,0 +1,69 @@
+.auto__page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: rgba(gray, 0.4);
+  flex-direction: column;
+
+  .ap__top {
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+
+    padding: 0.7rem 0.5rem;
+
+    height: fit-content;
+    border-radius: 0.4rem;
+
+    button {
+      padding: 0.5rem;
+      border: none;
+      background-color: crimson;
+      color: white;
+      width: 5rem;
+      font-size: 1rem;
+      border-radius: 0.4rem;
+      cursor: pointer;
+    }
+
+    .class__name,
+    .class__teacher {
+      padding: 0.5rem;
+      border: 1px solid #18c23d;
+      border-radius: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      color: #187fc2;
+      background-color: rgba(white, 0.4);
+
+      label {
+        font-size: 1rem;
+        font-weight: 500;
+      }
+
+      .icon {
+        font-size: 1.2rem;
+        color: #18c23d;
+      }
+    }
+
+
+  }
+
+
+
+  .ap__bottom {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    .ap__video {
+      object-fit: contain;
+
+      border-radius: 0.5rem;
+
+    }
+  }
+}
